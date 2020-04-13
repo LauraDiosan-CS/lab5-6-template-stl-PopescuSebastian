@@ -1,4 +1,5 @@
 #include "Book.h"
+#include <string>
 Book::Book() {
 	this->title = "";
 	this->author = "";
@@ -60,6 +61,27 @@ bool Book::operator == (const Book& e) {
 	else
 		return false;
 
+}
+
+std::ostream& operator<<(std::ostream& os, const Book& d) {
+	if(d.borrowed == true)
+		os << "The book: " << d.title << " written by: " << d.author << " is " << "borrowed\n";
+	else
+		os << "The book: " << d.title << " written by: " << d.author << " is " << "un-borrowed\n";
+	return os;
+}
+
+std::istream& operator>>(std::istream& is, Book& d) {
+	std::string title, author, input_line;
+	bool status;
+	std::getline(is, title, ',');
+	std::getline(is, author, ',');
+	is >> status;
+	is.get();
+	d.setTitle(title);
+	d.setAuthor(author);
+	d.setStatus(status);
+	return is;
 }
 
 Book::~Book() {};

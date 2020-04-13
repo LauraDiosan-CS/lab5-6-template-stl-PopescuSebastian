@@ -148,15 +148,28 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Book.cpp" />
+    <ClCompile Include="Controller.cpp" />
     <ClCompile Include="Lab-6.cpp" />
+    <ClCompile Include="Read.cpp" />
     <ClCompile Include="tests.cpp" />
     <ClCompile Include="UI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Book.h" />
+    <ClInclude Include="Controller.h" />
+    <ClInclude Include="Read.h" />
     <ClInclude Include="Repo.h" />
+    <ClInclude Include="RepoFile.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="tests.h" />
     <ClInclude Include="UI.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Lab-6.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="repo.txt" />
+    <Text Include="repo_out.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

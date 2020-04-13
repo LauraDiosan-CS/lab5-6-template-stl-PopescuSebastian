@@ -10,8 +10,9 @@
 int main()
 {
 	UI ui;
+	test tests;
+	tests.run();
 	ui.run();
-	runTests();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

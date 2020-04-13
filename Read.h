@@ -1,0 +1,9 @@
+#pragma once
+#include <string.h>
+#include <iostream>
+int input_commnd_read();
+std::string title_read();
+std::string author_read();
+bool status_read();
+bool command_read();
+bool command_read_2();
